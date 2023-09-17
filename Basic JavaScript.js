@@ -55,34 +55,34 @@ let fact = "is cool!";
 fact = "is awesome!";
 console.log(FCC, fact);
 
-// Add Two Numbers with JavaScript
+// Add Two Numbers 
 const sum = 10 + 10;
 
-// Subtract One Number from Another with JavaScript
+// Subtract One Number from Another  
 const difference = 45 - 33;
 
-// Multiply Two Numbers with JavaScript
+// Multiply Two Numbers  
 const product = 8 * 10;
 
-// Divide One Number by Another with JavaScript
+// Divide One Number by Another  
 const quotient = 66 / 33;
 
-// Increment a Number with JavaScript
+// Increment a Number  
 let myVar = 87;  // i++;  is equivalent to i = i + 1;
 myVar++;
 
-// Decrement a Number with JavaScript
+// Decrement a Number  
 let myVar = 11;
 myVar --;
 
-// Create Decimal Numbers with JavaScript
+// Create Decimal Numbers  
 const ourDecimal = 5.7;
 const myDecimal  = 5.7;
 
 // Multiply Two Decimals
 const product = 2.0 * 2.5;
 
-// Divide One Decimal by Another with JavaScript
+// Divide One Decimal by Another 
 const quotient = 4.4 / 2.0; 
 
 // Finding a Remainder
@@ -155,6 +155,29 @@ const lastName = "Lovelace";
 lastNameLength = lastName.length;
 
 // Use Bracket Notation to Find the First Character in a String
+let firstLetterOfLastName = "";
+const lastName = "Lovelace";
+
+firstLetterOfLastName = lastName[0]; 
+
+// Understand String Immutability
+let myStr = "Jello World";
+myStr = "Hello World"; // only can change redefining the variable
+
+// Use Bracket Notation to Find the Nth Character in a String
+const lastName = "Lovelace";
+const thirdLetterOfLastName = lastName[2]; 
+
+// Use Bracket Notation to Find the Last Character in a String
+const lastName = "Lovelace";
+const lastLetterOfLastName = lastName[lastName.length -1]; 
+
+// Use Bracket Notation to Find the Nth-to-Last Character in a String
+const lastName = "Lovelace";
+const secondToLastLetterOfLastName = lastName[lastName.length - 2]; 
+
+
+
 
 
 
