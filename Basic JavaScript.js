@@ -177,6 +177,80 @@ const lastName = "Lovelace";
 const secondToLastLetterOfLastName = lastName[lastName.length - 2]; 
 
 // Word Blanks
+const myNoun = "dog";
+const myAdjective = "big";
+const myVerb = "ran";
+const myAdverb = "quickly";
+
+// Only change code below this line
+const wordBlanks = "The " + myAdjective + " " + myNoun + " " + myVerb + " " + myAdverb + "."; 
+// The completed sentence will be: "The big dog ran quickly."
+
+// Store Multiple Values in one Variable using JavaScript Arrays
+const myArray = ["karen", 5];
+
+// Nest one Array within Another Array
+const myArray = [["myArray"]];
+
+// Access Array Data with Indexes
+const myArray = [50, 60, 70]
+const myData = myArray[0]
+
+// Modify Array Data With Indexes
+const myArray = [18, 64, 99];
+myArray[0] = 45;
+
+// Access Multi-Dimensional Arrays With Indexes
+const myArray = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+  [[10, 11, 12], 13, 14],
+];
+
+const myData = myArray[2][1]; // It shows 8
+
+// Manipulate Arrays With push Method
+const myArray = [["John", 23], ["cat", 2]];
+myArray.push(["dog", 3]); // it shows myArray = [["John", 23], ["cat", 2],["dog", 3]];
+
+// Manipulate Arrays With pop Method
+const myArray = [["John", 23], ["cat", 2]];
+const removedFromMyArray = myArray.pop();  //  is used to pop a value off of the end of an array. 
+
+// Manipulate Arrays With shift Method
+const myArray = [["John", 23], ["dog", 3]];
+const removedFromMyArray = myArray.shift(); // it removes the first element 
+
+// Manipulate Arrays With unshift Method
+const myArray = [["John", 23], ["dog", 3]];
+myArray.shift();
+myArray.unshift(["Paul", 35]); // unshift adds the element at the beginning of the array.
+
+// Shopping List
+const myList = [
+  ["peanuts butter", 1], ["milk", 6],["bread", 1], ["eggs", 12], ["coke", 1]
+];
+
+// Write Reusable JavaScript with Functions
+function reusableFunction() {  // this code creates the function
+  console.log("Hi World")
+}
+reusableFunction();  // this invokes the function
+
+// Passing Values to Functions with Arguments
+function functionWithArgs(arg1, arg2) {
+  console.log(arg1 + arg2);}
+functionWithArgs(2,3);
+
+// Return a Value from a Function with Return
+function timesFive(num) {
+  return num * 5;
+}
+const answer = timesFive(5)  // it returns num * 5
+
+// 
+
 
 
 
