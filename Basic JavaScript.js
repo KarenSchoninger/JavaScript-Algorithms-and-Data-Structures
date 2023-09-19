@@ -249,7 +249,76 @@ function timesFive(num) {
 }
 const answer = timesFive(5)  // it returns num * 5
 
-// 
+// Global Scope and Functions     -- scope refers to the visibility of variables
+let myGlobal = 10; // Declare and initialize the global variable myGlobal
+
+function fun1() {
+  oopsGlobal = 5;      // Assign 5 to oopsGlobal without using var, let, or const
+}
+
+function fun2() {
+  let output = "";
+  if (typeof myGlobal != "undefined") {
+    output += "myGlobal: " + myGlobal;
+  }
+  if (typeof oopsGlobal != "undefined") {
+    output += " oopsGlobal: " + oopsGlobal;
+  }
+  console.log(output);
+}
+
+// Local Scope and Functions
+function myLocalScope() {
+  var myVar = "This is a local variable";
+
+  console.log('inside myLocalScope', myVar);
+}
+
+myLocalScope(); // This will log the value of myVar inside the function
+// Attempting to access myVar outside of myLocalScope will result in a ReferenceError
+// console.log('outside myLocalScope', myVar); // Commented out to prevent the ReferenceError
+
+// Global vs. Local Scope in Functions                 the local variable takes precedence over the global variable.
+// Setup
+const outerWear = "T-Shirt";
+
+function myOutfit() {
+  const outerWear = "sweater";
+  return outerWear;
+}
+
+myOutfit();   // will return sweater
+
+// Understanding Undefined Value returned from a Function
+
+let sum = 0;
+
+function addThree() {
+  sum = sum + 3;
+}
+
+function addFive() {
+  sum = sum + 5;
+}
+
+addThree();
+addFive();  // the results are undefined
+
+// Assignment with a Returned Value
+
+let processed = 0;
+function processArg(num) {
+  return (num + 3) / 5;
+}
+
+processed = processArg(7);
+
+// Stand in Line
+
+
+
+
+
 
 
 
