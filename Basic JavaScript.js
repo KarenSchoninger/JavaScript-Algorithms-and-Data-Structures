@@ -509,6 +509,85 @@ function testElseIf(val) {
 testElseIf(7);
 
 // Logical Order in If Else Statements
+function orderMyLogic(val) {
+  if (val < 5) {
+    return "Less than 5";
+  } else if (val < 10) {
+    return "Less than 10";
+  } else {
+    return "Greater than or equal to 10";
+  }
+}
+
+orderMyLogic(7);
+
+// Chaining If Else Statements
+function testSize(num) {
+  if (num < 5) {
+  return "Tiny";
+  } else if (num < 10) {
+  return "Small";
+  } else if (num < 15) {
+  return "Medium"
+  } else if (num < 20) {
+  return "Large"
+  } else if (num >= 20) {
+  return "Huge"
+  } 
+}
+
+testSize(7);
+
+// Golf Code
+const names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Go Home!"];
+
+function golfScore(par, strokes) {
+  if (strokes === 1) {
+    return names[0]; // Hole-in-one!
+  } else if (strokes <= par - 2) {
+    return names[1]; // Eagle
+  } else if (strokes === par - 1) {
+    return names[2]; // Birdie
+  } else if (strokes === par) {
+    return names[3]; // Par
+  } else if (strokes === par + 1) {
+    return names[4]; // Bogey
+  } else if (strokes === par + 2) {
+    return names[5]; // Double Bogey
+  } else if (strokes >= par + 3) {
+    return names[6]; // Go Home!
+  }
+}
+
+console.log(golfScore(5, 4)); // Ejemplo de uso
+
+// Selecting from Many Options with Switch Statements
+function caseInSwitch(val) {
+  let answer = "";
+
+  switch (val) {
+    case 1:
+      answer = "alpha";
+      break;
+    case 2:
+      answer = "beta";
+      break;
+    case 3:
+      answer = "gamma";
+      break;
+    case 4:
+      answer = "delta";
+      break;
+    default:
+      answer = "No match"; 
+  }
+  return answer;
+}
+
+console.log(caseInSwitch(1)); // will return "alpha"
+
+// Adding a Default Option in Switch Statements
+
 
 
 
