@@ -636,6 +636,210 @@ function sequentialSizes(val) {
 console.log(sequentialSizes(1)); // Esto devolverá "Low"
 
 // Replacing If Else Chains with Switch
+function chainToSwitch(val) {
+  let answer = "";
+
+  switch (val) {
+  case "bob":
+  answer = "Marley";
+  break;
+  case 42:
+  answer = "The Answer";
+  break;
+  case 1:
+  answer = "There is no #1";
+  break;
+  case 99: 
+  answer = "Missed me by this much!";
+  break;
+  case 7:
+  answer = "Ate Nine";
+ 
+}
+
+  return answer;
+}
+
+chainToSwitch(7);
+
+// Returning Boolean Values from Functions
+function isLess(a, b) {
+  return a < b;
+}
+
+isLess(10, 15);
+
+// Return Early Pattern for Functions
+function abTest(a, b) {
+  // Verifica si 'a' o 'b' son menores que 0
+  if (a < 0 || b < 0) {
+    return undefined; // Sale de la función con valor 'undefined'
+  }
+
+  // Si 'a' y 'b' son mayores o iguales a 0, realiza el cálculo
+  return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
+}
+
+console.log(abTest(2, 2)); // Ejemplo 
+
+// Counting Cards
+let count = 0;
+
+function cc(card) {
+  // Función para actualizar el contador en función de la carta
+  function updateCount(cardValue) {
+    switch (cardValue) {
+      case 2:
+      case 3:
+      case 4:
+      case 5:
+      case 6:
+        count++;
+        break;
+      case 10:
+      case 'J':
+      case 'Q':
+      case 'K':
+      case 'A':
+        count--;
+        break;
+    }
+  }
+
+  // Verifica si 'card' es un número o una cadena y llama a updateCount en consecuencia
+  if (typeof card === 'number') {
+    updateCount(card);
+  } else {
+    switch (card) {
+      case '2':
+      case '3':
+      case '4':
+      case '5':
+      case '6':
+        updateCount(parseInt(card));
+        break;
+      case '10':
+      case 'J':
+      case 'Q':
+      case 'K':
+      case 'A':
+        updateCount(card);
+        break;
+    }
+  }
+
+  // Devuelve la decisión (Bet o Hold) y el valor actual del contador
+  return count > 0 ? count + ' Bet' : count + ' Hold';
+}
+
+console.log(cc(2)); // Ejemplo de uso
+console.log(cc(3));
+console.log(cc(7));
+console.log(cc('K'));
+console.log(cc('A'));
+
+// Build JavaScript Objects  (Objects are similar to arrays, except that instead of using indexes to access and modify their data, you access the data in objects through what are called properties.)
+// Objects are useful for storing data in a structured way, and can represent real world objects, like a cat.
+const myDog = {
+  
+  "name": "Bob",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["balls", "other dogs"]
+
+};
+
+// Accessing Object Properties with Dot Notation
+const testObj = {
+  "hat": "ballcap",
+  "shirt": "jersey",
+  "shoes": "cleats"
+};
+
+const hatValue = testObj.hat;      
+const shirtValue = testObj.shirt;   
+
+// Accessing Object Properties with Bracket Notation
+const testObj = {
+  "an entree": "hamburger",
+  "my side": "veggies",
+  "the drink": "water"
+};
+
+const entreeValue = testObj["an entree"];
+const drinkValue = testObj["the drink"];
+
+console.log(entreeValue); // Esto imprimirá "hamburger"
+console.log(drinkValue);  // Esto imprimirá "water"
+
+// Accessing Object Properties with Variables
+const testObj = {
+  12: "Namath",
+  16: "Montana",
+  19: "Unitas"
+};
+
+const playerNumber = 16;             // Cambia la variable playerNumber a 16
+const player = testObj[playerNumber];                 // Utiliza playerNumber como clave para buscar el nombre del jugador en testObj
+
+console.log(player); // Esto imprimirá "Montana"
+
+// Updating Object Properties
+const myDog = {
+  "name": "Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"]
+};
+
+myDog.name = "Happy Coder";
+
+// Add New Properties to a JavaScript Object
+const myDog = {
+  "name": "Happy Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"]
+};
+
+myDog.bark = "woof";
+
+// Delete Properties from a JavaScript Object
+const myDog = {
+  "name": "Happy Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"],
+  "bark": "woof"
+};
+
+delete myDog.tails;
+
+// Using Objects for Lookups
+function phoneticLookup(val) {
+  let result = "";
+
+  const lookup = {                 // Objeto 'lookup' que mapea valores a cadenas asociadas
+    "alpha": "Adams",
+    "bravo": "Boston",
+    "charlie": "Chicago",
+    "delta": "Denver",
+    "echo": "Easy",
+    "foxtrot": "Frank"
+  };
+
+  result = lookup[val];                  // Utiliza 'val' como clave para buscar en 'lookup'
+
+  return result;
+}
+
+console.log(phoneticLookup("charlie")); // Esto devolverá "Chicago"
+
+// Testing Objects for Properties
+
+
+
+
 
 
 
