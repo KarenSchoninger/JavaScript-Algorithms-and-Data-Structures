@@ -836,6 +836,19 @@ function phoneticLookup(val) {
 console.log(phoneticLookup("charlie")); // Esto devolverá "Chicago"
 
 // Testing Objects for Properties
+function checkObj(obj, checkProp) {
+  // Verifica si 'obj' tiene la propiedad 'checkProp'
+  if (obj.hasOwnProperty(checkProp)) {
+    // Si la propiedad existe, devuelve su valor
+    return obj[checkProp];
+  } else {
+    // Si la propiedad no existe, devuelve "Not Found"
+    return "Not Found";
+  }
+}
+
+// Manipulating Complex Objects
+
 
 
 
