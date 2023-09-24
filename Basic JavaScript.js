@@ -848,6 +848,187 @@ function checkObj(obj, checkProp) {
 }
 
 // Manipulating Complex Objects
+const myMusic = [
+  {
+    "artist": "Billy Joel",
+    "title": "Piano Man",
+    "release_year": 1973,
+    "formats": [
+      "CD",
+      "8T",
+      "LP"
+    ],
+    "gold": true
+  }
+];
+
+myMusic.push({    // add a new array to myMusic
+  "artist": "Karen",
+  "title": "Programming",
+  "release_year": 2023, // Año de lanzamiento
+  "formats": [
+    "CD",
+    "Digital",
+    "Vinilo"
+  ]
+});
+
+// Accessing Nested Objects
+const myStorage = {
+  "car": {
+    "inside": {
+      "glove box": "maps",
+      "passenger seat": "crumbs"
+     },
+    "outside": {
+      "trunk": "jack"
+    }
+  }
+};
+
+const gloveBoxContents = myStorage.car.inside["glove box"];
+
+// Accessing Nested Arrays
+const myPlants = [
+  {
+    type: "flowers",
+    list: [
+      "rose",
+      "tulip",
+      "dandelion"
+    ]
+  },
+  {
+    type: "trees",
+    list: [
+      "fir",
+      "pine",
+      "birch"
+    ]
+  }
+];
+
+const secondTree = myPlants[1].list[1];
+
+// Record Collection
+const recordCollection = {
+  2548: {
+    albumTitle: 'Slippery When Wet',
+    artist: 'Bon Jovi',
+    tracks: ['Let It Rock', 'You Give Love a Bad Name']
+  },
+  2468: {
+    albumTitle: '1999',
+    artist: 'Prince',
+    tracks: ['1999', 'Little Red Corvette']
+  },
+  1245: {
+    artist: 'Robert Palmer',
+    tracks: []
+  },
+  5439: {
+    albumTitle: 'ABBA Gold'
+  }
+};
+
+
+function updateRecords(records, id, prop, value) {
+  // Si el valor es una cadena vacía, eliminar la propiedad 'prop' del álbum 'id'
+  if (value === "") {
+    delete records[id][prop];
+  } else {
+    // Si 'prop' no es 'tracks' y 'value' no es una cadena vacía, asignar 'value' al 'prop' del álbum 'id'
+    if (prop !== "tracks") {
+      records[id][prop] = value;
+    } else {
+      // Si 'prop' es 'tracks' y 'value' no es una cadena vacía
+      if (!records[id].hasOwnProperty("tracks")) {
+        // Si el álbum no tiene una propiedad 'tracks', asignar un array vacío
+        records[id]["tracks"] = [];
+      }
+      // Agregar 'value' como el último elemento en el array 'tracks' del álbum 'id'
+      records[id]["tracks"].push(value);
+    }
+  }
+  return records;
+}
+
+// Iterate with JavaScript While Loops
+const myArray = [];
+
+let i = 5;
+
+while (i >=0) {
+  myArray.push(i);
+  i--;
+}
+
+// Iterate with JavaScript For Loops
+const myArray = [];
+
+for (let i = 1; i < 6; i++) {
+  myArray.push(i);
+}
+
+// Iterate Odd Numbers With a For Loop
+const myArray = [];
+
+for (let i = 1; i <10; i +=2) {
+  myArray.push(i);
+}
+
+// Count Backwards With a For Loop
+const myArray = [];
+ for (let i = 9; i > 0; i -= 2) {
+   myArray.push(i);
+ }
+
+// Iterate Through an Array with a For Loop
+const myArr = [2, 3, 4, 5, 6];
+let total = 0;
+
+for (let i = 0; i < myArr.length; i++) {
+  total += myArr[i];
+}
+
+// Nesting For Loops
+function multiplyAll(arr) {
+  let product = 1;
+
+  // Iterate through the main array
+  for (let i = 0; i < arr.length; i++) {
+    // Iterate through the sub-array
+    for (let j = 0; j < arr[i].length; j++) {
+      // Multiply the current element with the product
+      product *= arr[i][j];
+    }
+  }
+
+  return product;
+}
+
+// Iterate with JavaScript Do...While Loops
+const myArray = [];
+let i = 10;
+
+do{
+  myArray.push(i);
+  i++;
+}
+while (i <11);
+
+// Replace Loops using Recursion
+function sum(arr, n) {
+  // Caso base: cuando n es igual a 0, la suma es 0
+  if (n === 0) {
+    return 0;
+  } else {
+    // Llamada recursiva: suma el elemento en la posición n-1 y los primeros n-1 elementos
+    return sum(arr, n - 1) + arr[n - 1];
+  }
+}
+
+// Profile Lookup
 
 
 
