@@ -1109,6 +1109,39 @@ function checkEqual(a, b) {
 checkEqual(1, 2);
 
 // Use Multiple Conditional (Ternary) Operators
+function checkSign(num) {
+  return (num > 0) ? "positive"
+    : (num < 0) ? "negative"
+    : "zero";
+}
+
+checkSign(10);
+
+// Use Recursion to Create a Countdown
+function countdown(n) {
+  // Caso base: si n es menor que 1, devolver un array vacío
+  if (n < 1) {
+    return [];
+  } else {
+    // Caso recursivo: llama a countdown con n-1 y concatena n al resultado
+    const arr = countdown(n - 1);
+    arr.unshift(n); // Agrega n al principio del array
+    return arr;
+  }
+}
+
+// Use Recursion to Create a Range of Numbers
+function rangeOfNumbers(startNum, endNum) {
+  // Caso base: si startNum es mayor que endNum, devolver un array vacío
+  if (startNum > endNum) {
+    return [];
+  } else {
+    // Caso recursivo: llama a rangeOfNumbers con startNum+1 y concatena startNum al resultado
+    const arr = rangeOfNumbers(startNum + 1, endNum);
+    arr.unshift(startNum); // Agrega startNum al principio del array
+    return arr;
+  }
+}
 
 
 
