@@ -42,6 +42,10 @@ var magic = function() {
 const magic = () => new Date();
 
 // Write Arrow Functions with Parameters
+const myConcat = (arr1, arr2) => arr1.concat(arr2);
+
+// Set Default Parameters for Your Functions
+
 
 
 
