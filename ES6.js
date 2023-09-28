@@ -92,7 +92,12 @@ const LOCAL_FORECAST = {
 
 const { today: { low: lowToday, high: highToday } } = LOCAL_FORECAST;
 
-// 
+
+let a = 8, b = 6;
+        // Utilizando la asignación de desestructuración para intercambiar los valores
+[a, b] = [b, a];
+
+// Destructuring via rest elements
 
 
 
