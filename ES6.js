@@ -45,7 +45,54 @@ const magic = () => new Date();
 const myConcat = (arr1, arr2) => arr1.concat(arr2);
 
 // Set Default Parameters for Your Functions
+const increment = (number, value = 1) => number + value;  // Con esta modificación, si no se proporciona un segundo argumento value al llamar a la función increment, se asumirá que su valor predeterminado es 1.
 
+// Use the Rest Parameter with Function Parameters
+const sum = (...args) => {
+  let total = 0;
+  for (let i = 0; i < args.length; i++) {
+    total += args[i];
+  }
+  return total;
+}
+
+// Use the Spread Operator to Evaluate Arrays In-Place
+const arr1 = ['JAN', 'FEB', 'MAR', 'APR', 'MAY'];
+let arr2;
+
+arr2 = [...arr1];  
+
+console.log(arr2);
+
+// Use Destructuring Assignment to Extract Values from Objects
+const HIGH_TEMPERATURES = {
+  yesterday: 75,
+  today: 77,
+  tomorrow: 80
+};
+
+const { today, tomorrow } = HIGH_TEMPERATURES;
+
+// Use Destructuring Assignment to Assign Variables from Objects
+const HIGH_TEMPERATURES = {
+  yesterday: 75,
+  today: 77,
+  tomorrow: 80
+};
+
+
+const { today: highToday, tomorrow: highTomorrow } = HIGH_TEMPERATURES;
+
+// Use Destructuring Assignment to Assign Variables from Nested Objects
+const LOCAL_FORECAST = {
+  yesterday: { low: 61, high: 75 },
+  today: { low: 64, high: 77 },
+  tomorrow: { low: 68, high: 80 }
+};
+
+const { today: { low: lowToday, high: highToday } } = LOCAL_FORECAST;
+
+// 
 
 
 
