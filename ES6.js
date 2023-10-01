@@ -98,6 +98,18 @@ let a = 8, b = 6;
 [a, b] = [b, a];
 
 // Destructuring via rest elements
+function removeFirstTwo(list) {
+  // Utiliza la sintaxis rest para obtener una submatriz a partir del tercer elemento en adelante
+  const [, , ...rest] = list;
+  return rest;
+}
+
+const source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const sourceWithoutFirstTwo = removeFirstTwo(source);
+
+console.log(sourceWithoutFirstTwo); // Resultado: [3, 4, 5, 6, 7, 8, 9, 10]
+
+// Use Destructuring Assignment to Pass an Object as a Function's Parameters
 
 
 
