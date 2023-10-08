@@ -169,6 +169,35 @@ console.log(carrot.name);
 
 
 // Use getters and setters to Control Access to an Object
+class Thermostat {
+  constructor(temperatureFahrenheit) {
+    this._temperatureFahrenheit = temperatureFahrenheit;
+  }
+
+  get temperature() {
+    return (5 / 9) * (this._temperatureFahrenheit - 32);
+  }
+
+  set temperature(temperatureCelsius) {
+    this._temperatureFahrenheit = (temperatureCelsius * 9.0) / 5 + 32;
+  }
+}
+
+const thermos = new Thermostat(76); // Estableciendo en escala Fahrenheit
+let temp = thermos.temperature; // 24.44 en Celsius
+thermos.temperature = 26;
+temp = thermos.temperature; // 26 en Celsius
+
+// Create a Module Script
+<html>
+  <body>
+    <!-- Only change code below this line -->
+    <script type="module" src="index.js"></script>
+    <!-- Only change code above this line -->
+  </body>
+</html>
+
+// Use export to Share a Code Block
 
 
 
