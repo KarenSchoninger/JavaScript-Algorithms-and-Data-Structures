@@ -215,6 +215,97 @@ uppercaseString("hello");
 lowercaseString("WORLD!");
 
 // Use * to Import Everything from a File
+import * as stringFunctions from "./string_functions.js";
+
+stringFunctions.uppercaseString("hello");
+stringFunctions.lowercaseString("WORLD!");
+
+// Create an Export Fallback with export default
+export default function subtract(x, y) {
+  return x - y;
+}
+
+// Import a Default Export
+import subtract from './math_functions.js';
+
+subtract(7,4);
+
+// Create a JavaScript Promise
+const makeServerRequest = new Promise ((resolve, reject) => {
+
+});
+
+// Complete a Promise with resolve and reject
+const makeServerRequest = new Promise((resolve, reject) => {
+  // responseFromServer representa una respuesta de un servidor
+  let responseFromServer = true; // Cambia este valor para probar diferentes escenarios
+    
+  if(responseFromServer) {
+    // Si responseFromServer es verdadero, llamamos al método resolve
+    resolve("We got the data"); // Resolvemos la promesa con el mensaje de éxito
+  } else {  
+    // Si responseFromServer es falso, llamamos al método reject
+    reject("Data not received"); // Rechazamos la promesa con el mensaje de error
+  }
+});
+
+     // Ejemplo de uso de la promesa
+makeServerRequest
+  .then((result) => {
+    console.log(result); // Imprime "We got the data" si la promesa se resuelve con éxito
+  })
+  .catch((error) => {
+    console.log(error); // Imprime "Data not received" si la promesa se rechaza
+  });
+
+// Handle a Fulfilled Promise with then
+const makeServerRequest = new Promise((resolve, reject) => {
+  // responseFromServer is set to true to represent a successful response from a server
+  let responseFromServer = true;
+    
+  if(responseFromServer) {
+    resolve("We got the data");
+  } else {  
+    reject("Data not received");
+  }
+});
+
+    // Utiliza .then() para manejar el éxito
+makeServerRequest.then((result) => {
+  console.log(result); // Imprime "We got the data" si la promesa se resuelve con éxito
+});
+
+// Handle a Rejected Promise with catch
+const makeServerRequest = new Promise((resolve, reject) => {
+  // responseFromServer is set to false to represent an unsuccessful response from a server
+  let responseFromServer = false;
+    
+  if(responseFromServer) {
+    resolve("We got the data");
+  } else {  
+    reject("Data not received");
+  }
+});
+
+makeServerRequest
+  .then(result => {
+    console.log(result);
+  })
+  .catch(error => {
+    console.log(error); // Imprime "Data not received" si la promesa se rechaza
+  });
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
